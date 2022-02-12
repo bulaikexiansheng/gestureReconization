@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="222222" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1bc8f410-9c70-4ecd-a30c-f3bf3523c5e6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/annotation-processors.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/jarAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/javaCompile/taskJars.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcsWorkingDirs/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_23_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_annotations_24_0_0_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_24_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_base_10_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_basement_10_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_tasks_10_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_gms_play_services_wearable_10_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_support_wearable_2_0_0_beta1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_wearable_wearable_2_0_0_beta1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/arm64-v8a/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/arm64-v8a/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/arm64-v8a/build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/arm64-v8a/build_model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/arm64-v8a/build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/arm64-v8a/json_generation_record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/armeabi-v7a/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/armeabi-v7a/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/armeabi-v7a/build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/armeabi-v7a/build_model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/armeabi-v7a/build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/armeabi-v7a/json_generation_record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86/build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86/build_model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86/build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86/json_generation_record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86_64/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86_64/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86_64/build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86_64/build_model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86_64/build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/debug/x86_64/json_generation_record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/arm64-v8a/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/arm64-v8a/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/arm64-v8a/build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/arm64-v8a/build_model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/arm64-v8a/build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/arm64-v8a/json_generation_record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/armeabi-v7a/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/armeabi-v7a/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/armeabi-v7a/build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/armeabi-v7a/build_model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/armeabi-v7a/build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/armeabi-v7a/json_generation_record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86/build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86/build_model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86/build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86/json_generation_record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86_64/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86_64/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86_64/build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86_64/build_model.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86_64/build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndkBuild/release/x86_64/json_generation_record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/ndk_locator_record.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/arm64-v8a/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/arm64-v8a/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/arm64-v8a/ndkBuild_build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/arm64-v8a/ndkBuild_build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/armeabi-v7a/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/armeabi-v7a/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/armeabi-v7a/ndkBuild_build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/armeabi-v7a/ndkBuild_build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/x86/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/x86/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/x86/ndkBuild_build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/x86/ndkBuild_build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/x86_64/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/x86_64/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/x86_64/ndkBuild_build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/debug/x86_64/ndkBuild_build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/arm64-v8a/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/arm64-v8a/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/arm64-v8a/ndkBuild_build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/arm64-v8a/ndkBuild_build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/armeabi-v7a/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/armeabi-v7a/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/armeabi-v7a/ndkBuild_build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/armeabi-v7a/ndkBuild_build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/x86/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/x86/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/x86/ndkBuild_build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/x86/ndkBuild_build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/x86_64/android_gradle_build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/x86_64/android_gradle_build_mini.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/x86_64/ndkBuild_build_command.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.externalNativeBuild/ndkBuild/release/x86_64/ndkBuild_build_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/26labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/26labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/30labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/30labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/assets/labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/AppCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/AppCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/AudioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/AudioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/Constents.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/Constents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/FFT.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/FFT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/MyApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/MyApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/WavHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/WavHeader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/WaveData.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/WaveData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/WaveFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/WaveFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/WaveProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/WaveProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/decode/DecodeContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/decode/DecodeContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/decode/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/decode/Decoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/decode/FrequencyDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/decode/FrequencyDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/encode/EncodeContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/encode/EncodeContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/encode/Encoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/encode/Encoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/encode/FrequencyEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/encode/FrequencyEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/fft/BesselCal.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/fft/BesselCal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/fft/RealDoubleFFT.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/fft/RealDoubleFFT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/fft/RealDoubleFFT_Mixed.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/fft/RealDoubleFFT_Mixed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/fft/STFT.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/fft/STFT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/MessageAudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/MessageAudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/MessagePlayCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/MessagePlayCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/PlayCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/PlayCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/PlayerInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/PlayerInvoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/WavePlayCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/WavePlayCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/WavePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play/WavePlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/AudioTrackPlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/AudioTrackPlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/GlobalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/GlobalConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/MatrixProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/MatrixProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/PhaseAudioRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/PhaseAudioRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/PhaseProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/PhaseProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/PhaseProcessI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/PhaseProcessI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/PhaseProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/PhaseProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/SynchLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/SynchLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/WaveFileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/play2/WaveFileUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/CRCommnad.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/CRCommnad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/CommonRecorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/CommonRecorder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/PredictWav.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/PredictWav.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/RecordCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/RecordCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/Recorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/Recorder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/RecorderInvoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/RecorderInvoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/RecorderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/RecorderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/RecorderTestCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/RecorderTestCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/WavRecordCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/WavRecordCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/WavRecorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/record/WavRecorder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/ui/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/fruitbasket/audioplatform/ui/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jni/Android.mk" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jni/Android.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jni/Application.mk" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jni/Application.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jni/MatrixProcess.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jni/MatrixProcess.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jni/MatrixProcess.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jni/MatrixProcess.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jni/RangeFinder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jni/RangeFinder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jni/RangeFinder.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jni/RangeFinder.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/jni/audioplatform.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/jni/audioplatform.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/python/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/python/function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/python/workFlow.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/python/workFlow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@/Users/owenjiang/.android/avd/Pixel_3a_API_30_x86.avd]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile_vertical" />
+        <option value="resourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>goback2</find>
+      <find>goba</find>
+      <find>start</find>
+      <find>predicting</find>
+      <find>stop</find>
+      <find>Des</find>
+      <find>Toast</find>
+      <find>dataReady</find>
+      <find>1111</find>
+      <find>makeACalling</find>
+      <find>musicplay</find>
+      <find>hand</find>
+      <find>handler</find>
+      <find>song_index</find>
+      <find>threadstop</find>
+      <find>22</find>
+      <find>on</find>
+      <find>startHandControl</find>
+      <find>ifinside</find>
+      <find>Stop</find>
+      <find>mplayer.release();</find>
+      <find>onStop</find>
+      <find>11</find>
+      <find>goTolistLayout</find>
+      <find>readC</find>
+      <find>labelP</find>
+      <find>p</find>
+      <find>pyth</find>
+      <find>Python</find>
+      <find>read</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="xiaozh" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kGF3pgkfbUpcy4yMw1szZEt5DX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-28T03:16:49.437Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="android.project.structure.last.selected" value="lib_test" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="device.picker.selection" value="3300d3bb75c7721d" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="project.structure.last.edited" value="SDK Location" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\AndroidStudioProjects\AP3.0\AP2.0\app\src\main" />
+      <recent name="D:\AndroidStudioProjects\AP3.0\AP2.0\app\src\main\java\com\demo\jump" />
+      <recent name="D:\AndroidStudioProjects\AP\app\src\main\res\drawable" />
+      <recent name="D:\AndroidStudioProjects\AP\app\src\main\res\layout" />
+      <recent name="D:\AndroidStudioProjects\AP\app\src\main\java\com\demo\jump" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AndroidStudioProjects\AP3.0\AP2.0\app\src\main\java\com\demo\jump" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="AirTouch.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1bc8f410-9c70-4ecd-a30c-f3bf3523c5e6" name="Default" comment="" />
+      <created>1599203451992</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599203451992</updated>
+    </task>
+    <task id="LOCAL-00001" summary="AcouDigits _v1.22.0;model_v48;acc:88%">
+      <created>1599618074250</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599618074250</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="AcouDigits _v1.22.0;model_v48;acc:88%" />
+    <option name="LAST_COMMIT_MESSAGE" value="AcouDigits _v1.22.0;model_v48;acc:88%" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="490" y="372" key="#PSD" timestamp="1643710716273">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="490" y="372" key="#PSD/0.25.1440.875@0.25.1440.875" timestamp="1643710716273" />
+    <state x="185" y="139" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1643706204437">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="185" y="139" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.875@0.25.1440.875" timestamp="1643706204437" />
+    <state x="100" y="167" width="1240" height="626" key="AVDManager" timestamp="1643706609967">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="100" y="167" width="1240" height="626" key="AVDManager/0.25.1440.875@0.25.1440.875" timestamp="1643706609967" />
+    <state x="147" y="71" key="SettingsEditor" timestamp="1643710786990">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="147" y="71" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1643710786990" />
+    <state x="147" y="94" key="SettingsEditor/0.25.1440.875@0.25.1440.875" timestamp="1643706184238" />
+  </component>
+</project>

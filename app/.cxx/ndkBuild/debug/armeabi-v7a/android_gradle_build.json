@@ -1,38 +1,38 @@
 {
   "buildFiles": [
-    "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Android.mk",
-    "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Application.mk"
+    "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Application.mk"
   ],
   "cleanCommands": [
-    "F:\\Sdk\\ndk\\21.1.6352462\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dG:/all_android_projects/AudioPlatform_IntegrateWithTencent/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\build\\intermediates\\ndkBuild\\debug\\lib clean"
+    "/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/lib clean"
   ],
-  "buildTargetsCommand": "F:\\Sdk\\ndk\\21.1.6352462\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dG:/all_android_projects/AudioPlatform_IntegrateWithTencent/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\build\\intermediates\\ndkBuild\\debug\\lib {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/lib {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "jni-debug-armeabi-v7a": {
-      "buildCommand": "F:\\Sdk\\ndk\\21.1.6352462\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Android.mk NDK_APPLICATION_MK\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003dG:/all_android_projects/AudioPlatform_IntegrateWithTencent/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\build\\intermediates\\ndkBuild\\debug\\lib G:/all_android_projects/AudioPlatform_IntegrateWithTencent/app/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libjni.so",
+      "buildCommand": "/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/lib /Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libjni.so",
       "toolchain": "toolchain-armeabi-v7a",
       "abi": "armeabi-v7a",
       "artifactName": "jni",
       "files": [
         {
-          "src": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\MatrixProcess.cpp",
-          "flags": "-target armv7-none-linux-androideabi21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot F:/Sdk/ndk/21.1.6352462/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fno-exceptions -fno-rtti -fpic -march\u003darmv7-a -mthumb -O0 -UNDEBUG -fno-limit-debug-info -IG:/all_android_projects/AudioPlatform_IntegrateWithTencent/app/src/main/jni -DANDROID -Wformat -Werror\u003dformat-security"
+          "src": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/MatrixProcess.cpp",
+          "flags": "-target armv7-none-linux-androideabi21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fno-exceptions -fno-rtti -fpic -march\u003darmv7-a -mthumb -O0 -UNDEBUG -fno-limit-debug-info -I/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/sources/cxx-stl/llvm-libc++/include -I/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/sources/cxx-stl/llvm-libc++abi/include -I/Users/owenjiang/Desktop/AirTouch/app/src/main/jni -DANDROID -nostdinc++ -Wformat -Werror\u003dformat-security -fno-strict-aliasing"
         },
         {
-          "src": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\RangeFinder.cpp",
-          "flags": "-target armv7-none-linux-androideabi21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot F:/Sdk/ndk/21.1.6352462/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fno-exceptions -fno-rtti -fpic -march\u003darmv7-a -mthumb -O0 -UNDEBUG -fno-limit-debug-info -IG:/all_android_projects/AudioPlatform_IntegrateWithTencent/app/src/main/jni -DANDROID -Wformat -Werror\u003dformat-security"
+          "src": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/RangeFinder.cpp",
+          "flags": "-target armv7-none-linux-androideabi21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fno-exceptions -fno-rtti -fpic -march\u003darmv7-a -mthumb -O0 -UNDEBUG -fno-limit-debug-info -I/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/sources/cxx-stl/llvm-libc++/include -I/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/sources/cxx-stl/llvm-libc++abi/include -I/Users/owenjiang/Desktop/AirTouch/app/src/main/jni -DANDROID -nostdinc++ -Wformat -Werror\u003dformat-security -fno-strict-aliasing"
         },
         {
-          "src": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\audioplatform.cpp",
-          "flags": "-target armv7-none-linux-androideabi21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot F:/Sdk/ndk/21.1.6352462/build//../toolchains/llvm/prebuilt/windows-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fno-exceptions -fno-rtti -fpic -march\u003darmv7-a -mthumb -O0 -UNDEBUG -fno-limit-debug-info -IG:/all_android_projects/AudioPlatform_IntegrateWithTencent/app/src/main/jni -DANDROID -Wformat -Werror\u003dformat-security"
+          "src": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/audioplatform.cpp",
+          "flags": "-target armv7-none-linux-androideabi21 -fdata-sections -ffunction-sections -fstack-protector-strong -funwind-tables -no-canonical-prefixes --sysroot /Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -g -Wno-invalid-command-line-argument -Wno-unused-command-line-argument -D_FORTIFY_SOURCE\u003d2 -fno-exceptions -fno-rtti -fpic -march\u003darmv7-a -mthumb -O0 -UNDEBUG -fno-limit-debug-info -I/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/sources/cxx-stl/llvm-libc++/include -I/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/sources/cxx-stl/llvm-libc++abi/include -I/Users/owenjiang/Desktop/AirTouch/app/src/main/jni -DANDROID -nostdinc++ -Wformat -Werror\u003dformat-security -fno-strict-aliasing"
         }
       ],
-      "output": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\armeabi-v7a\\libjni.so"
+      "output": "/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libjni.so"
     }
   },
   "toolchains": {
     "toolchain-armeabi-v7a": {
-      "cppCompilerExecutable": "F:\\Sdk\\ndk\\21.1.6352462\\build\\..\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+      "cppCompilerExecutable": "/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
     }
   },
   "cFileExtensions": [],

@@ -1,3 +1,4 @@
+
 package com.fruitbasket.audioplatform.record;
 
 import android.content.Context;
@@ -14,17 +15,24 @@ import com.fruitbasket.audioplatform.WavHeader;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
+import static com.fruitbasket.audioplatform.Constents.ready1;
 
-import uk.me.berndporr.iirj.Butterworth;
 
 /**
  * Created by FruitBasket on 2017/6/5.
@@ -32,18 +40,18 @@ import uk.me.berndporr.iirj.Butterworth;
 
 public class WavRecorder extends Recorder {
     private static final String TAG="..WavRecorder";
-
-//    public static ByteArrayOutputStream bos = new ByteArrayOutputStream(512);
-//    ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
-//    public static int[] pcmdata = null;
+    private static double eachRecordTime = 2000;
+    private static int num = 0;
+    private static double step = 0.5;
+    private static double whileTime = 24*step;
+    private static final int readResultSize = 3584;
+    public static Byte[] recordData = new Byte[3000000];
+    public static int sleepTime=500;//检测到有动作后的线程暂停时长，单位ms
 
     private boolean isRecording;
     public static String audioName;//录音文件的名字
-
     public String subDir;//用于存放录音文件的子目录
-
     public static String path = null;
-
     public WavRecorder(){
         super();
     }
@@ -75,38 +83,8 @@ public class WavRecorder extends Recorder {
 
                 try {
                     //创建子目录
-                    File subFile=new File(AppCondition.getAppExternalDir()+File.separator);
-                    boolean state=(subFile).mkdir();
-                    Log.d(TAG,"create sub dir state=="+state);
-
-                    audioName =getRecordedFileName();
-                    Constents.file_path = AppCondition.getAppExternalDir()+File.separator+audioName + ".wav";
-                    Log.i(TAG,"get audioname!!" );
-                    File audioFile;
-                    DataOutputStream output;
-
-                    if (Environment.getExternalStorageState()// 如果外存存在
-                            .equals(Environment.MEDIA_MOUNTED)){
-                        Log.i(TAG,"make1: if the device has got a external storage");
-
-                        audioFile=new File(AppCondition.getAppExternalDir()+File.separator+audioName);
-                        output= new DataOutputStream(
-                                new BufferedOutputStream(
-                                        new FileOutputStream(audioFile)
-                                )
-                        );
-                    }
-                    else{//否则
-                        Log.i(TAG,"mark2: the device has not got a external storage");
-                        String string=audioName;
-                        output= new DataOutputStream(
-                                new BufferedOutputStream(
-                                        MyApp.getContext().openFileOutput(string, Context.MODE_PRIVATE)
-                                )
-                        );
-                        audioFile=MyApp.getContext().getFileStreamPath(string);
-                    }
-
+                    File subFile2=new File(AppCondition.getAppExternalDir()+File.separator + Constents.user_path+"2");
+                    boolean state2=(subFile2).mkdir();
                     AudioRecord audioRecord = new AudioRecord(
                             MediaRecorder.AudioSource.MIC,
                             sampleRate,
@@ -116,8 +94,12 @@ public class WavRecorder extends Recorder {
                     audioRecord.startRecording();
 
                     isRecording = true;
+                    long starttime = System.currentTimeMillis();
+                    long endtime = starttime;
+                    int length=0;
+                    Log.d(TAG, "时间点：开始");
                     while (isRecording) {
-
+                    //    currentWhileTime++;
                         int readResult = audioRecord.read(buffer, 0, bufferSize);
                         if (readResult == AudioRecord.ERROR_INVALID_OPERATION) {
                             Log.e(TAG, "readState==AudioRecord.ERROR_INVALID_OPERATION");
@@ -127,80 +109,62 @@ public class WavRecorder extends Recorder {
                             return;
                         } else {
                             for (int i = 0; i < readResult; i++) {
-                                output.writeByte(buffer[i]);
-//                                bos.write(buffer[i]);
+                                recordData[length++] = buffer[i];
                             }
                         }
+                        endtime = System.currentTimeMillis();
+                        if(endtime-starttime >= eachRecordTime){
+
+                            String audioName2 =getRecordedFileName()+"-"+getRecordedFileName2();//文件名加入时间方便测试看
+                            //change 10.15
+                            File audioFile2;
+                            DataOutputStream output2;
+                            String file_path = AppCondition.getAppExternalDir()+File.separator + Constents.user_path+"2"+File.separator+audioName2 + ".pcm";
+                            if (Environment.getExternalStorageState()// 如果外存存在
+                                    .equals(Environment.MEDIA_MOUNTED)){
+                                Log.i(TAG,"make1: if the device has got a external storage");
+
+                                audioFile2=new File(file_path);
+                                output2= new DataOutputStream(
+                                        new BufferedOutputStream(
+                                                new FileOutputStream(audioFile2)
+                                        )
+                                );
+                            }
+                            else{//否则
+                                Log.i(TAG,"mark2: the device has not got a external storage");
+                                String string=audioName2;
+                                output2= new DataOutputStream(
+                                        new BufferedOutputStream(
+                                                MyApp.getContext().openFileOutput(string, Context.MODE_PRIVATE)
+                                        )
+                                );
+                                audioFile2=MyApp.getContext().getFileStreamPath(string);
+                            }
+                           isActing(recordData,file_path,length,output2);
+                           length = 0;
+                           output2.flush();
+                           output2.close();
+                            System.out.println("before:"+getRecordedFileName());
+                           Thread.sleep(1000);
+                            //add 11.12
+                           ready1=true;
+                            //add 11.12
+                            System.out.println("after:"+getRecordedFileName());
+                            Log.d(TAG, "时间点：开始" + (endtime-starttime));
+                            starttime = System.currentTimeMillis();
+
+                        }
                     }
-
-
-
+                    Log.d(TAG, "run: 结束了" );
                     //结束以上循环后就停止播放并释放资源
                     audioRecord.stop();
-                    output.flush();
-                    output.close();
+
                     audioRecord.release();
-                    audioRecord = null;
-                    long start = System.currentTimeMillis();
-                    // get predict result
-
-                    Log.i(TAG, "begin to make wav file");
-                    //制作wav文件
-                    ///这里先将原始音频保存起来，在改装成wav文件，这不是一个好做法
-                    BufferedInputStream inputStream;
-                    BufferedOutputStream outputStream;
-                    int length;
-                    if(Environment.getExternalStorageState()//如果外存存在
-                            .equals(Environment.MEDIA_MOUNTED)){
-                        Log.i(TAG,"the device has got a external storage");
-
-                        FileInputStream fis = new FileInputStream(audioFile);
-                        inputStream= new BufferedInputStream(fis);
-
-                        outputStream = new BufferedOutputStream(
-                                new FileOutputStream(AppCondition.getAppExternalDir()+File.separator+audioName + ".wav")
-//                        new FileOutputStream(AppCondition.getAppExternalDir()+File.separator+subDir+File.separator+audioName + ".wav")
-                        );
-                        length= (int) fis.getChannel().size();
-                    }
-                    else{//否则
-                        String string=audioName;
-//                        String string=subDir+File.separator+audioName;
-                        FileInputStream fis=MyApp.getContext().openFileInput(string);
-                        inputStream= new BufferedInputStream(fis);
-
-                        outputStream=new BufferedOutputStream(
-                                MyApp.getContext().openFileOutput(string+".wav",Context.MODE_PRIVATE)
-                        );
-                        length=(int)fis.getChannel().size();
-
-                    }
-
-                    byte[] readBuffer = new byte[1024];
-
-                    Log.i(TAG, "create a wav file header");
-                    WavHeader wavHeader = new WavHeader();
-                    wavHeader.setAdjustFileLength(length - 8);
-                    wavHeader.setAudioDataLength(length - 44);
-                    wavHeader.setBlockAlign(channelIn, encoding);
-                    wavHeader.setByteRate(channelIn, sampleRate, encoding);
-                    wavHeader.setChannelCount(channelIn);
-                    wavHeader.setEncodingBit(encoding);
-                    wavHeader.setSampleRate(sampleRate);
-                    wavHeader.setWaveFormatPcm(WavHeader.WAV_FORMAT_PCM);
-
-                    outputStream.write(wavHeader.getHeader());
-//                    音频文件的转移，从pcm转成wav文件，可以考虑直接将pcm的数据保存进行使用
-                    while (inputStream.read(readBuffer) != -1) {
-                        outputStream.write(readBuffer);
-                    }
-                    inputStream.close();
-                    outputStream.close();
-                    audioFile.delete();//删除原始的pcm文件
-                    Log.i(TAG, "successful create wav file");
-                    long end = System.currentTimeMillis();
-                    Constents.makewavfiletime = end - start;
+                    Log.i(TAG, "successful create pcm file");
                 } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 return;
@@ -208,10 +172,38 @@ public class WavRecorder extends Recorder {
         }).start();
         return true;
     }
+    public String getRecordedFileName2(){
+        num++;
+        int temp = num;
+        return String.valueOf(temp);
+    }
+    public void display(Byte[] bytes,int l,DataOutputStream bw) throws IOException {
+        //  File file=new File("D:\\a.txt");//创建文件对象
+        for(int i=0;i<l;i++){
+            bw.write(bytes[i]);
 
+        }
+    }
     @Override
     public boolean stop() {
         isRecording = false;
         return true;
     }
+
+    //add 10.15
+    public boolean isActing(Byte[] bytes,String path,int T,DataOutputStream output2){
+        boolean isacting=true;
+        System.out.println("wavrecord:"+path);
+        if(isacting)
+        {
+            try {
+                display(bytes,T,output2);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Constents.pathqueue.add(path);
+        }
+        return true;
+    }
+    //add 10.15
 }

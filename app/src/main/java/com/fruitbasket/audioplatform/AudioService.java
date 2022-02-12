@@ -18,6 +18,9 @@ import com.fruitbasket.audioplatform.record.RecorderTestCommand;
 import com.fruitbasket.audioplatform.record.WavRecordCommand;
 import com.fruitbasket.audioplatform.record.WavRecorder;
 
+import java.util.Queue;
+import java.util.concurrent.LinkedTransferQueue;
+
 /**
  * Created by FruitBasket on 2017/5/26.
  */
@@ -27,7 +30,6 @@ final public class AudioService extends Service {
 
     private PlayerInvoker playerInvoker=new PlayerInvoker();
     private RecorderInvoker recorderInvoker=new RecorderInvoker();
-
 
     @Override
     public void onCreate() {

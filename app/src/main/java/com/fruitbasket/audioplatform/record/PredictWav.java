@@ -31,12 +31,12 @@ public class PredictWav extends Activity{
     private String file_path = null;
     private Interpreter tflite = null;
     private boolean load_result = false;
-    private TextView result_text;
+
+
     private List<String> resultLabel = new ArrayList<>();
 
     public PredictWav(String path){
         file_path = path;
-        result_text = (TextView) findViewById(R.id.result_text);
         readCacheLabelFromLocalFile();
         load_model("keras_BNmodel_resize_all_txt");
         init();
@@ -58,9 +58,10 @@ public class PredictWav extends Activity{
             float[] results = new float[labelProbArray[0].length];
             System.arraycopy(labelProbArray[0], 0, results, 0, labelProbArray[0].length);
             // show predict result and time
+            
             int r = get_max_result(results);
-            String show_text = "result：" + r + "\nname：" + resultLabel.get(r) + "\nprobability：" + results[r] + "\ntime：" + time + "ms";
-            result_text.setText(show_text);
+            String show_text = "result：" + r + "\nname：" + resultLabel.get(r) +
+                    "\nprobability：" + results[r] + "\ntime：" + time + "ms";
         } catch (Exception e) {
             e.printStackTrace();
         }

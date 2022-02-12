@@ -1,62 +1,92 @@
 [
   {
     "level": "INFO",
-    "message": "Start JSON generation. Platform version: 21 min SDK version: armeabi-v7a"
+    "message": "Start JSON generation. Platform version: 21 min SDK version: armeabi-v7a",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "rebuilding JSON G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\armeabi-v7a\\android_gradle_build.json due to:"
+    "message": "rebuilding JSON /Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/armeabi-v7a/android_gradle_build.json due to:",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "- expected json G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\armeabi-v7a\\android_gradle_build.json file is not present, will remove stale json folder"
+    "message": "- expected json /Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/armeabi-v7a/android_gradle_build.json file is not present, will remove stale json folder",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "- missing previous command file G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\armeabi-v7a\\build_command.txt, will remove stale json folder"
+    "message": "- missing previous command file /Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/armeabi-v7a/build_command.txt, will remove stale json folder",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "- command changed from previous, will remove stale json folder"
+    "message": "- command changed from previous, will remove stale json folder",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "removing stale contents from \u0027G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\armeabi-v7a\u0027"
+    "message": "removing stale contents from \u0027/Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/armeabi-v7a\u0027",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "created folder \u0027G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\armeabi-v7a\u0027"
+    "message": "created folder \u0027/Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/armeabi-v7a\u0027",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "executing ndkBuild Executable : F:\\Sdk\\ndk\\21.1.6352462\\ndk-build.cmd\narguments : \nNDK_PROJECT_PATH\u003dnull\nAPP_BUILD_SCRIPT\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Android.mk\nNDK_APPLICATION_MK\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Application.mk\nAPP_ABI\u003darmeabi-v7a\nNDK_ALL_ABIS\u003darmeabi-v7a\nNDK_DEBUG\u003d1\nAPP_PLATFORM\u003dandroid-21\nNDK_OUT\u003dG:/all_android_projects/AudioPlatform_IntegrateWithTencent/app/build/intermediates/ndkBuild/debug/obj\nNDK_LIBS_OUT\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\build\\intermediates\\ndkBuild\\debug\\lib\nAPP_SHORT_COMMANDS\u003dfalse\nLOCAL_SHORT_COMMANDS\u003dfalse\n-B\n-n\njvmArgs : \n\n"
+    "message": "executing ndkBuild Executable : /Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/ndk-build\narguments : \nNDK_PROJECT_PATH\u003dnull\nAPP_BUILD_SCRIPT\u003d/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk\nNDK_APPLICATION_MK\u003d/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Application.mk\nAPP_ABI\u003darmeabi-v7a\nNDK_ALL_ABIS\u003darmeabi-v7a\nNDK_DEBUG\u003d1\nAPP_PLATFORM\u003dandroid-21\nNDK_OUT\u003d/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/obj\nNDK_LIBS_OUT\u003d/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/lib\nAPP_SHORT_COMMANDS\u003dfalse\nLOCAL_SHORT_COMMANDS\u003dfalse\n-B\n-n\njvmArgs : \n\n",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "Executable : F:\\Sdk\\ndk\\21.1.6352462\\ndk-build.cmd\narguments : \nNDK_PROJECT_PATH\u003dnull\nAPP_BUILD_SCRIPT\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Android.mk\nNDK_APPLICATION_MK\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Application.mk\nAPP_ABI\u003darmeabi-v7a\nNDK_ALL_ABIS\u003darmeabi-v7a\nNDK_DEBUG\u003d1\nAPP_PLATFORM\u003dandroid-21\nNDK_OUT\u003dG:/all_android_projects/AudioPlatform_IntegrateWithTencent/app/build/intermediates/ndkBuild/debug/obj\nNDK_LIBS_OUT\u003dG:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\build\\intermediates\\ndkBuild\\debug\\lib\nAPP_SHORT_COMMANDS\u003dfalse\nLOCAL_SHORT_COMMANDS\u003dfalse\n-B\n-n\njvmArgs : \n\n"
+    "message": "Executable : /Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/ndk-build\narguments : \nNDK_PROJECT_PATH\u003dnull\nAPP_BUILD_SCRIPT\u003d/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk\nNDK_APPLICATION_MK\u003d/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Application.mk\nAPP_ABI\u003darmeabi-v7a\nNDK_ALL_ABIS\u003darmeabi-v7a\nNDK_DEBUG\u003d1\nAPP_PLATFORM\u003dandroid-21\nNDK_OUT\u003d/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/obj\nNDK_LIBS_OUT\u003d/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/lib\nAPP_SHORT_COMMANDS\u003dfalse\nLOCAL_SHORT_COMMANDS\u003dfalse\n-B\n-n\njvmArgs : \n\n",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "done executing ndkBuild"
+    "message": "done executing ndkBuild",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "write build output G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\armeabi-v7a\\build_output.txt"
+    "message": "write build output /Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/armeabi-v7a/build_output.txt",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "parse and convert ndk-build output to build configuration JSON"
+    "message": "parse and convert ndk-build output to build configuration JSON",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "found application make file G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Application.mk"
+    "message": "found application make file /Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Application.mk",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "write command file G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\armeabi-v7a\\build_command.txt"
+    "message": "write command file /Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/armeabi-v7a/build_command.txt",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   },
   {
     "level": "INFO",
-    "message": "JSON generation completed without problems"
+    "message": "JSON generation completed without problems",
+    "file": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+    "tag": "debug|armeabi-v7a"
   }
 ]

@@ -1,60 +1,128 @@
 {
+  "abi": "X86",
+  "abiPlatformVersion": 21,
+  "buildSettings": {
+    "environmentVariables": []
+  },
+  "cxxBuildFolder": "/Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/x86",
+  "info": {
+    "abi": "X86",
+    "bitness": 32,
+    "deprecated": false,
+    "default": true
+  },
+  "originalCxxBuildFolder": "/Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/x86",
   "variant": {
+    "buildSystemArgumentList": [],
+    "buildTargetSet": [],
+    "cFlagsList": [],
+    "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
+    "cppFlagsList": [],
+    "isDebuggableEnabled": true,
     "module": {
-      "rootBuildGradleFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent",
-      "sdkFolder": "F:\\sdk",
-      "isNativeCompilerSettingsCacheEnabled": false,
-      "isBuildOnlyTargetAbiEnabled": true,
-      "splitsAbiFilterSet": [],
-      "intermediatesFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\build\\intermediates",
-      "gradleModulePathName": ":app",
-      "moduleRootFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app",
-      "makeFile": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\src\\main\\jni\\Android.mk",
       "buildSystem": "NDK_BUILD",
-      "compilerSettingsCacheFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\.cxx",
-      "cxxFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx",
-      "ndkFolder": "F:\\sdk\\ndk\\21.1.6352462",
-      "ndkVersion": "21.1.6352462",
-      "ndkSupportedAbiList": [
-        "ARMEABI_V7A",
-        "ARM64_V8A",
-        "X86",
-        "X86_64"
-      ],
+      "cmakeToolchainFile": "/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake",
+      "cxxFolder": "/Users/owenjiang/Desktop/AirTouch/app/.cxx",
+      "gradleModulePathName": ":app",
+      "intermediatesFolder": "/Users/owenjiang/Desktop/AirTouch/app/build/intermediates",
+      "makeFile": "/Users/owenjiang/Desktop/AirTouch/app/src/main/jni/Android.mk",
+      "moduleBuildFile": "/Users/owenjiang/Desktop/AirTouch/app/build.gradle",
+      "moduleRootFolder": "/Users/owenjiang/Desktop/AirTouch/app",
       "ndkDefaultAbiList": [
         "ARMEABI_V7A",
         "ARM64_V8A",
         "X86",
         "X86_64"
       ],
-      "cmakeToolchainFile": "."
+      "ndkFolder": "/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620",
+      "ndkMetaAbiList": [
+        {
+          "abi": "ARMEABI_V7A",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "ARM64_V8A",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86_64",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        }
+      ],
+      "ndkMetaPlatforms": {
+        "min": 16,
+        "max": 31,
+        "aliases": {
+          "20": 19,
+          "25": 24,
+          "J": 16,
+          "J-MR1": 17,
+          "J-MR2": 18,
+          "K": 19,
+          "L": 21,
+          "L-MR1": 22,
+          "M": 23,
+          "N": 24,
+          "N-MR1": 24,
+          "O": 26,
+          "O-MR1": 27,
+          "P": 28,
+          "Q": 29,
+          "R": 30,
+          "S": 31
+        }
+      },
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultStl": "SYSTEM",
+      "ndkVersion": "23.1.7779620",
+      "project": {
+        "compilerSettingsCacheFolder": "/Users/owenjiang/Desktop/AirTouch/.cxx",
+        "cxxFolder": "/Users/owenjiang/Desktop/AirTouch/.cxx",
+        "ideBuildTargetAbi": "x86",
+        "isBuildOnlyTargetAbiEnabled": true,
+        "isCmakeBuildCohabitationEnabled": false,
+        "isNativeCompilerSettingsCacheEnabled": false,
+        "rootBuildGradleFolder": "/Users/owenjiang/Desktop/AirTouch",
+        "sdkFolder": "/Users/owenjiang/Library/Android/sdk",
+        "isPrefabEnabled": false
+      },
+      "splitsAbiFilterSet": [],
+      "stlSharedObjectMap": {
+        "LIBCXX_SHARED": {
+          "ARMEABI_V7A": "/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/libc++_shared.so",
+          "ARM64_V8A": "/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so",
+          "X86": "/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/i686-linux-android/libc++_shared.so",
+          "X86_64": "/Users/owenjiang/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/x86_64-linux-android/libc++_shared.so"
+        },
+        "LIBCXX_STATIC": {},
+        "NONE": {},
+        "SYSTEM": {}
+      }
     },
-    "buildSystemArgumentList": [],
-    "cFlagList": [],
-    "cppFlagsList": [],
+    "objFolder": "/Users/owenjiang/Desktop/AirTouch/app/build/intermediates/ndkBuild/debug/obj/local",
     "variantName": "debug",
-    "soFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\build\\intermediates\\ndkBuild\\debug\\lib",
-    "objFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local",
-    "jsonFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug",
-    "gradleBuildOutputFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\cxx\\debug",
-    "isDebuggableEnabled": true,
     "validAbiList": [
-      "ARMEABI_V7A",
-      "ARM64_V8A",
-      "X86",
-      "X86_64"
+      "X86"
     ],
-    "buildTargetSet": []
+    "prefabDirectory": "/Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/prefab",
+    "prefabPackageDirectoryList": []
   },
-  "abi": "X86",
-  "abiPlatformVersion": 21,
-  "cxxBuildFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\x86",
-  "jsonFile": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\x86\\android_gradle_build.json",
-  "gradleBuildOutputFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\cxx\\debug\\x86",
-  "objFolder": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\build\\intermediates\\ndkBuild\\debug\\obj\\local\\x86",
-  "buildCommandFile": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\x86\\build_command.txt",
-  "buildOutputFile": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\x86\\build_output.txt",
-  "modelOutputFile": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\x86\\build_model.json",
-  "jsonGenerationLoggingRecordFile": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\x86\\json_generation_record.json",
-  "compileCommandsJsonFile": "G:\\all_android_projects\\AudioPlatform_IntegrateWithTencent\\app\\.cxx\\ndkBuild\\debug\\x86\\compile_commands.json"
+  "prefabFolder": "/Users/owenjiang/Desktop/AirTouch/app/.cxx/ndkBuild/debug/prefab/x86"
 }

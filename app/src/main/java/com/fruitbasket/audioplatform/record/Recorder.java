@@ -5,6 +5,7 @@ import android.media.AudioFormat;
 import com.fruitbasket.audioplatform.AppCondition;
 
 import java.text.SimpleDateFormat;
+import java.util.Queue;
 
 /**
  * Created by FruitBasket on 2017/5/27.
@@ -49,7 +50,7 @@ public abstract class Recorder {
      * @return file name
      */
     protected static String getRecordedFileName(){
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH'h'-mm'm'-ss's'");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH'h'-mm'm'-ss's'-SSS'ms'");
         return df.format(System.currentTimeMillis());
     }
 }

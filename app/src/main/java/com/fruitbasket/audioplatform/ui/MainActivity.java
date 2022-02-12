@@ -1,6 +1,7 @@
 package com.fruitbasket.audioplatform.ui;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
@@ -12,21 +13,36 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.AudioFormat;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Message;
+import android.provider.Settings;
+import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.demo.WriteTypeActivity;
+import com.demo.bar.BarService;
+import com.demo.dialing.DialingMainActivity;
+import com.demo.dialing.TelephoneBookActivity;
+import com.demo.jump.AppMainActivity;
+import com.demo.mymusic.SongSheetActivity;
 import com.fruitbasket.audioplatform.AppCondition;
 import com.fruitbasket.audioplatform.AudioService;
 import com.fruitbasket.audioplatform.Constents;
+import com.fruitbasket.audioplatform.MyApp;
 import com.fruitbasket.audioplatform.R;
 import com.fruitbasket.audioplatform.WaveProducer;
 import com.fruitbasket.audioplatform.play.Player;
@@ -47,12 +63,19 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.chaquo.python.Kwarg;
 import com.chaquo.python.PyObject;
 import com.chaquo.python.android.AndroidPlatform;
 import com.chaquo.python.Python;
+
+import static com.fruitbasket.audioplatform.Constents.applist;
+import static com.fruitbasket.audioplatform.Constents.canjump;
+import static com.fruitbasket.audioplatform.Constents.predicting;
+import static com.fruitbasket.audioplatform.Constents.ready1;
 
 
 final public class MainActivity extends Activity {
@@ -62,30 +85,33 @@ final public class MainActivity extends Activity {
     private SeekBar waveRateSB;
     private ToggleButton recorderTB;
 
-
-
+    private ToggleButton startbutton;
+    private LinearLayout AnotherAPP,music,phonebook;
+    private Button showBar;
     private Interpreter tflite = null;
     private boolean load_result = false;
     private TextView result_text;
     private ImageView picture1;
+    private EditText path_box;
+
     private List<String> resultLabel = new ArrayList<>();
-
-
+    private Python py;
+    private PyObject obj1;
+    //add 10.15
+    public boolean ispredicting;
+    PredictHandler1 predictHandler1=new PredictHandler1();
+    //add 10.15
     private int channelOut= Player.CHANNEL_OUT_BOTH;
     private int channelIn= AudioFormat.CHANNEL_IN_MONO;
-//    private int channelIn = AudioFormat.CHANNEL_IN_STEREO;
+    //    private int channelIn = AudioFormat.CHANNEL_IN_STEREO;
     private int waveRate;//声波的频率
-
     public  int iBeginHz = 19000;
     public  int iStepHz=0;
     public  int ifreqNum = 1;
     public  int iSimpleHz = 44100;
-
-    private int model_index = 0;
+    public int jumpNum ;
     private int[] ddims = {1, 3, 56, 56};
-    private static final String[] PADDLE_MODEL = {
-            "model_v48"
-    };
+    private String[] texttype = {"digits","letter"};
 
 
     private Intent intent;
@@ -110,14 +136,16 @@ final public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i(TAG,"onCreate()");
+        canjump=false;
         setContentView(R.layout.activity_main);
-        result_text = (TextView) findViewById(R.id.result_text);
-        picture1 = (ImageView) findViewById(R.id.show_image);
+        startbutton=findViewById(R.id.start_button);
+
         readCacheLabelFromLocalFile();
-//        load_model("model_v33");
+        load_model( "model_v782");
         initializeViews();
         long start1 = System.currentTimeMillis();
         initPython();
+        this.obj1 = this.py.getModule("function");
         long end1 = System.currentTimeMillis();
         long time = end1 - start1;
         Log.d(TAG,"time used :"+ time);
@@ -127,24 +155,182 @@ final public class MainActivity extends Activity {
             bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
         }
 
-    }
+        AnotherAPP=findViewById(R.id.jump_app);
+        music=findViewById(R.id.music);
+        phonebook=findViewById(R.id.phonebook);
+        AnotherAPP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             //   Toast.makeText(MainActivity.this,"AnotherAPP",Toast.LENGTH_SHORT).s;
+                Intent intent1= new Intent(MainActivity.this, AppMainActivity.class);
+                intent1.putExtra("flag",2);
+                startActivity(intent1);
+            }
+        });
+        music.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1= new Intent(MainActivity.this, SongSheetActivity.class);
+                startActivity(intent1);
+            }
+        });
+        phonebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1= new Intent(MainActivity.this, DialingMainActivity.class);
+                startActivity(intent1);            }
+        });
+        startbutton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @RequiresApi(api = Build.VERSION_CODES.M)
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    predicting = true;
+                    ready1 = true;
+                    startbutton.setChecked(true);
+                    startPlayWav();
+                    Constents.user_path = "AirTouch";
+                    startFloatingService(recorderTB);
+                    Log.d(TAG, "onCheckedChanged:+ float " );
+                    startRecordWav();
+                    startbutton.setBackgroundDrawable(getResources().getDrawable(R.drawable.corner4));
+                }
+                else{
+                    predicting = false;
+                    startbutton.setChecked(false);
+                    Log.d(TAG, "onCheckedChanged: " + "线程结束");
+                    startbutton.setBackgroundDrawable(getResources().getDrawable(R.drawable.corner5));
+                    try {
+                        stopRecord();
+                        stopService(new Intent(MainActivity.this, BarService.class));
 
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    stopPlay();
+                }
+
+            }
+
+
+            public void startPlayWav(){
+                Log.i(TAG,"starPlayWav()");
+                if(audioService !=null){
+
+                    GlobalConfig.START_FREQ=iBeginHz;
+                    GlobalConfig.FREQ_INTERVAL=iStepHz;
+                    GlobalConfig.NUM_FREQ=ifreqNum;
+                    GlobalConfig.stPhaseProxy.init();//处理相位数据
+
+                    audioService.startPlayWav(channelOut, waveRate, WaveProducer.COS, iSimpleHz, iBeginHz, iStepHz, ifreqNum);
+                }
+                else{
+                    Log.w(TAG,"audioService==null");
+                }
+            }
+
+            public void stopPlay(){
+                Log.i(TAG,"stopPlay()");
+                if(audioService !=null){
+                    audioService.stopPlay();
+                }
+                else{
+                    Log.w(TAG,"audioService==null");
+                }
+            }
+
+            public void startRecordWav(){
+                Log.i(TAG,"startRecordWav()");
+                // add 10.14
+                GetPredictPath();
+                //add 10.14
+                if(audioService!=null){
+                    audioService.startRecordWav(
+                            channelIn,
+                            AppCondition.DEFAULE_SIMPLE_RATE,
+                            AudioFormat.ENCODING_PCM_16BIT
+                    );
+                }
+                else{
+                    Log.w(TAG,"audioService==null");
+                }
+
+            }
+
+            public void stopRecord() throws FileNotFoundException {
+                Log.i(TAG,"stopRecord()");
+                //add 10.14
+                ispredicting=false;
+                //add 10.14
+                if(audioService!=null){
+                    audioService.stopRecord();
+//            added code6.11
+                    Log.i(TAG,"path is :" + Constents.file_path);
+                }
+                else{
+                    Log.w(TAG,"audioService==null");
+                }
+
+            }
+
+
+            //add 10.14
+            public void GetPredictPath()
+            {
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        ispredicting=true;
+                        while(ispredicting)
+                        {
+                            String current_path=Constents.pathqueue.poll();
+                            if(current_path!=null&&!current_path.equals(""))
+                            {
+                                System.out.println("时间点:"+current_path);
+                                PredictWav(current_path);
+                            }
+
+                        }
+                    }
+                }).start();
+            }
+            //add 10.14
+        });
+    }
     // 初始化Python环境
     void initPython(){
         if (! Python.isStarted()) {
             Python.start(new AndroidPlatform(this));
         }
+        this.py = Python.getInstance();
     }
 
     @Override
     protected void onStart(){
         super.onStart();
+        canjump=false;
         Log.i(TAG,"onStart()");
+    }
+
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i(TAG,"onStop()");
+
+    }
+
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        canjump=false;
+        System.out.println("onRestart()");
     }
 
     @Override
     protected void onResume(){
         super.onResume();
+        canjump=false;
         Log.i(TAG,"onResume()");
     }
 
@@ -152,13 +338,9 @@ final public class MainActivity extends Activity {
     protected void onPause(){
         super.onPause();
         Log.i(TAG,"onPause()");
+
     }
 
-    @Override
-    protected void onStop(){
-        super.onStop();
-        Log.i(TAG,"onStop()");
-    }
 
     @Override
     protected void onDestroy(){
@@ -171,25 +353,42 @@ final public class MainActivity extends Activity {
         stopService(intent);//must stop the Service
         super.onDestroy();
     }
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public void startFloatingService(View view) {
+        Log.d(TAG, "startFloatingService: " );
+        if (!Settings.canDrawOverlays(MainActivity.this)) {
+            Toast.makeText(MainActivity.this, "当前无权限，请授权", Toast.LENGTH_SHORT);
+            startActivityForResult(new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName())), 0);
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                Log.d(TAG, "startFloatingService:3 " );
+                startForegroundService(new Intent(MainActivity.this, BarService.class));
+            }
+        }
+    }
 
+     @RequiresApi(api = Build.VERSION_CODES.M)
+     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+         super.onActivityResult(requestCode,resultCode,data);
+         if (requestCode == 0) {
+             if (!Settings.canDrawOverlays(MainActivity.this)) {
+                 Toast.makeText(MainActivity.this, "授权失败", Toast.LENGTH_SHORT).show();
+             } else {
+                 Toast.makeText(MainActivity.this, "授权成功", Toast.LENGTH_SHORT).show();
+                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                     Log.d(TAG, "startFloatingService:2 " );
+                     startForegroundService(new Intent(MainActivity.this, BarService.class));
+                 }
+             }
+         }
+     }
     private void initializeViews(){
-
-
-        ToggleCheckedChangeListener tcListener=new ToggleCheckedChangeListener();
-//        channelOut= WavePlayer.CHANNEL_OUT_RIGHT;
         channelOut= WavePlayer.CHANNEL_OUT_LEFT;
-
-        waveProducerTB =(ToggleButton)findViewById(R.id.wave_player_tb);
-        waveProducerTB.setOnCheckedChangeListener(tcListener);
-
-//        waveRateTV =(TextView)findViewById(R.id.waverate_tv);
-
         waveRateSB =(SeekBar)findViewById(R.id.waverate_sb);
         waveRateSB.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 waveRate =progress*1000;
-//                waveRateTV.setText(getResources().getString(R.string.frequency,progress));
             }
 
             @Override
@@ -203,161 +402,10 @@ final public class MainActivity extends Activity {
             }
         });
         waveRate = waveRateSB.getProgress()*1000;
-//        waveRateTV.setText(getResources().getString(R.string.frequency,waveRateSB.getProgress()));
 
         channelIn=AudioFormat.CHANNEL_IN_MONO;
-//        channelIn = AudioFormat.CHANNEL_IN_STEREO;
 
-        recorderTB=(ToggleButton)findViewById(R.id.recorder_tb);
-        recorderTB.setOnCheckedChangeListener(tcListener);
-
-
-        Button load_model = (Button) findViewById(R.id.load_model);
-        load_model.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDialog();
-            }
-        });
     }
-
-
-    public void showDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
-        // set dialog title
-        builder.setTitle("Please select model");
-
-        // set dialog icon
-        builder.setIcon(android.R.drawable.ic_dialog_alert);
-
-        // able click other will cancel
-        builder.setCancelable(true);
-
-        // cancel button
-        builder.setNegativeButton("cancel", null);
-
-        // set list
-        builder.setSingleChoiceItems(PADDLE_MODEL, model_index, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                model_index = which;
-                load_model(PADDLE_MODEL[model_index]);
-                dialog.dismiss();
-            }
-        });
-
-        // show dialog
-        builder.show();
-    }
-
-
-    private class ToggleCheckedChangeListener implements CompoundButton.OnCheckedChangeListener{
-        private static final String TAG="...TCCListener";
-
-        @Override
-        public void onCheckedChanged(CompoundButton button,boolean isChecked){
-            switch (button.getId()) {
-                case R.id.wave_player_tb:
-                    if (isChecked) {
-                        startPlayWav();
-                    } else {
-                        stopPlay();
-                    }
-                    break;
-                case R.id.recorder_tb:
-                    if (isChecked) {
-                        startRecordWav();
-                    } else {
-                        try {
-                            stopRecord();
-                        } catch (FileNotFoundException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                    break;
-                default:
-                    Log.w(TAG,"onClick(): id error");
-            }
-        }
-
-        private void startPlayWav(){
-            Log.i(TAG,"starPlayWav()");
-            if(audioService !=null){
-
-                GlobalConfig.START_FREQ=iBeginHz;
-                GlobalConfig.FREQ_INTERVAL=iStepHz;
-                GlobalConfig.NUM_FREQ=ifreqNum;
-                GlobalConfig.stPhaseProxy.init();//处理相位数据
-
-                audioService.startPlayWav(channelOut, waveRate, WaveProducer.COS, iSimpleHz, iBeginHz, iStepHz, ifreqNum);
-            }
-            else{
-                Log.w(TAG,"audioService==null");
-            }
-        }
-
-        private void stopPlay(){
-            Log.i(TAG,"stopPlay()");
-            if(audioService !=null){
-                audioService.stopPlay();
-            }
-            else{
-                Log.w(TAG,"audioService==null");
-            }
-        }
-
-        private void startRecordWav(){
-            Log.i(TAG,"startRecordWav()");
-            if(audioService!=null){
-                audioService.startRecordWav(
-                        channelIn,
-                        AppCondition.DEFAULE_SIMPLE_RATE,
-                        AudioFormat.ENCODING_PCM_16BIT
-                );
-            }
-            else{
-                Log.w(TAG,"audioService==null");
-            }
-
-        }
-
-        private void stopRecord() throws FileNotFoundException {
-            Log.i(TAG,"stopRecord()");
-            if(audioService!=null){
-                audioService.stopRecord();
-//            added code6.11
-                Log.i(TAG,"path is :" + Constents.file_path);
-                PredictWav(Constents.file_path);
-//            added code6.11
-            }
-            else{
-                Log.w(TAG,"audioService==null");
-            }
-
-        }
-
-        private void startTest(){
-            Log.i(TAG,"startTest()");
-            if(audioService!=null){
-                audioService.startRecordTest();
-            }
-            else{
-                Log.w(TAG,"audioService==null");
-            }
-        }
-
-        private void stopTest(){
-            Log.i(TAG,"stopTest()");
-            if(audioService!=null){
-                audioService.stopRecord();
-            }
-            else{
-                Log.w(TAG,"audioService==null");
-            }
-        }
-    }
-
 
 //    added code6.10
     /**
@@ -407,14 +455,14 @@ final public class MainActivity extends Activity {
 //                Log.i(TAG,"rgb:" +((val & 0x000000ff) )/255f+ " ,"+ ((val & 0x0000ff00)>>8 )/255f + " ," + ((val & 0x00ff0000) >>16)/255f);
             }
         }
-
+//
         if (bm.isRecycled()) {
             bm.recycle();
         }
         return imgData;
     }
-
-    // compress picture
+    //
+//    // compress picture
     public static Bitmap getScaleBitmap(String filePath) {
         BitmapFactory.Options opt = new BitmapFactory.Options();
         opt.inJustDecodeBounds = true;
@@ -452,15 +500,6 @@ final public class MainActivity extends Activity {
             }
         }
         return top_five;
-//        float probability = result[0];
-//        int r = 0;
-//        for (int i = 1; i < result.length; i++) {
-//            if (probability < result[i]) {
-//                probability = result[i];
-//                r = i;
-//            }
-//        }
-//        return r;
     }
 
     private void readCacheLabelFromLocalFile() {
@@ -477,66 +516,109 @@ final public class MainActivity extends Activity {
         }
     }
 
+    //add 10.15
+    public class PredictHandler1 extends Handler{
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == 100) {
+                int res = (int) msg.obj;
+                Toast.makeText(getApplicationContext(), String.valueOf(res), Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 
-    private void PredictWav(String path) throws FileNotFoundException {
+    public class PredictHandler2 extends Handler{
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == 100) {
+                String res = (String) msg.obj;
+                result_text.setText(res);
+            }
+        }
+    }
+
+    public class PredictHandler3 extends Handler{
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == 100) {
+                Bitmap bitmap = (Bitmap) msg.obj;
+                picture1.setImageBitmap(bitmap);
+            }
+        }
+    }
+    //add 10.15
+
+    private void PredictWav(String path){
         File f = new File(path);
         while (true){
             if(f.exists()){
-                Toast.makeText(MainActivity.this, path + " make success", Toast.LENGTH_SHORT).show();
-//                WaveData reader = new WaveData("/storage/emulated/0/AcouDigits/rec2018-12-27_22h33m44.298s.wav");
-//                path = "/storage/emulated/0/AcouDigits/0/2020-08-05_21h-37m-16s.wav";
-//                WaveData reader = new WaveData(path);
-
-                long start1 = System.currentTimeMillis();
+                //change 10.15
+                String str=path + " make success";
+                //change 10.15
                 Python py = Python.getInstance();
                 String pic_path = path.substring(0,path.length()-4)+ ".png";
-                PyObject obj1 = py.getModule("workFlow").callAttr("wav2picture",new Kwarg("wav_path", path),new Kwarg("pic_path", pic_path));
+               // PyObject obj1 = py.getModule("function").callAttr("wav2picture",new Kwarg("wav_path", path),new Kwarg("pic_path", pic_path));
+                long start1 = System.currentTimeMillis();
+                this.obj1.callAttr("wav2picture",new Kwarg("wav_path",path),new Kwarg("pic_path",pic_path));
                 long end1 = System.currentTimeMillis();
                 long time = end1 - start1;
                 Log.i(TAG,"python plot fft picture time used :" +time);
                 Bitmap bmp = getScaleBitmap(pic_path);
                 ByteBuffer inputData = getScaledMatrix(bmp, ddims);
-
-//                double[][] tempdata = reader.getData();
-//                ByteBuffer inputData =getScaledMatrixtxt(tempdata);
                 try {
-                    float[][] labelProbArray = new float[1][30];
+                    float[][] labelProbArray = new float[1][14];
                     long start = System.currentTimeMillis();
-                    // get predict result
-                    // multiple input
-//                    Object[] input = {inputData,inputData,inputData};
-//                    Map<Integer, Object> outputs = new HashMap();
-//                    outputs.put(0, labelProbArray);
-//                    tflite.runForMultipleInputsOutputs(input, outputs);
-                    // single input
                     tflite.run(inputData, labelProbArray);
                     long end = System.currentTimeMillis();
                     time = end - start;
 
-                    float[] resluts = new float[labelProbArray[0].length];
-                    System.arraycopy(labelProbArray[0], 0, resluts, 0, labelProbArray[0].length);
+                    float[] new_resluts = new float[labelProbArray[0].length];
+                    System.arraycopy(labelProbArray[0], 0, new_resluts, 0, labelProbArray[0].length);
                     //                  add code 8.14
-                    float[] new_resluts= new float[10];
+                 /*   float[] new_resluts= new float[10];
                     for(int i=0;i<10;i++){
                         new_resluts[i] = resluts[i*3] + resluts[i*3+1] + resluts[i*3+2];
-                    }
+                    }*/
 //                   add code 8.14
                     // show predict result and time
                     int[] r = get_max_result(new_resluts);
-                    String show_text = "You might write：\n" + resultLabel.get(r[0]) +"\t\t\t\t\t\t\tProbability:\t\t"+ new_resluts[r[0]]*100+"%\n"+ resultLabel.get(r[1]) +
+                   /* String show_text = "You might write：\n" + resultLabel.get(r[0]) +"\t\t\t\t\t\t\tProbability:\t\t"+ new_resluts[r[0]]*100+"%\n"+ resultLabel.get(r[1]) +
                             "\t\t\t\t\t\t\tProbability:\t\t"+ new_resluts[r[1]]*100+"%\n" + resultLabel.get(r[2]) +"\t\t\t\t\t\t\tProbability:\t\t"+ new_resluts[r[2]]*100+
                             "%\n" + resultLabel.get(r[3]) +"\t\t\t\t\t\t\tProbability:\t\t"+ new_resluts[r[3]]*100+"%\n" + resultLabel.get(r[4]) +"\t\t\t\t\t\t\tProbability:\t\t"+ new_resluts[r[4]]*100+
                             "%\nPredict Used:"+time + "ms"+ "\n\nMake wav file Used:"+Constents.makewavfiletime + "ms";
+*/
+                    Constents.currentNum = Integer.parseInt(resultLabel.get(r[0]));
+                    Message message1=new Message();
+                    message1.what=100;
+                    message1.obj=Constents.currentNum;
+                    predictHandler1.sendMessage(message1);
+                    Log.d(TAG, "keyrun: " + resultLabel.get(r[0]));
+                    Constents.dataReady = true;
 //                    callpythonadd();//add code
-                    result_text.setText(show_text);
-
+//                    result_text.setText(show_text);
+//                    Log.i(TAG,show_text);
+                    //add 10.15
+ /*                   Message message2=new Message();
+                    message2.what=100;
+                    message2.obj=show_text;
+                    predictHandler2.sendMessage(message2);
+                    //add 10.15
 //                    展示频谱图
+                    //change 10.15
                     Bitmap bitmap = BitmapFactory.decodeFile(pic_path);
-                    picture1.setImageBitmap(bitmap);
+//                    picture1.setImageBitmap(bitmap);
+                    //change 10.15
+
+                    //add 10.15
+                    Message message3=new Message();
+                    message3.what=100;
+
+                    message3.obj=bitmap;
+                    predictHandler3.sendMessage(message3);*/
+                    //add 10.15
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-//                monitorBatteryState();
                 break;
             }
         }

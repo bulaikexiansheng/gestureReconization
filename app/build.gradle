@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.chaquo.python' //添加行
+apply plugin: 'com.chaquo.python'
 
 android {
-    compileSdkVersion 23
+    //changed 9.19
+    compileSdkVersion 28
     buildToolsVersion '28.0.2'
 
     defaultConfig {
         applicationId "com.fruitbasket.audioplatform"
         minSdkVersion 21
-        targetSdkVersion 23
+        targetSdkVersion 28
         versionCode 22
         versionName "1.22"
         ndk {
@@ -17,14 +18,14 @@ android {
         }
         python {
             // 指定python路径
-            buildPython "D:\\Anaconda\\envs\\tensorflow\\python.exe"
-
+            buildPython "/Library/Frameworks/Python.framework/Versions/3.8/bin/Python3.8"
             pip{
                 install "opencv-python"
                 install "numpy"
                 install "wave"
                 install "scipy"
                 install "matplotlib"
+                install "pydub"
             }
 
         }
@@ -53,10 +54,14 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.google.android.support:wearable:2.0.0-beta1'
-    implementation 'com.google.android.gms:play-services-wearable:10.0.1'
-    compileOnly 'com.google.android.wearable:wearable:2.0.0-beta1'
+    //changed 9.19
+//    implementation 'com.google.android.support:wearable:2.0.0-beta1'
+//    implementation 'com.google.android.gms:play-services-wearable:10.0.1'
+//    compileOnly 'com.google.android.wearable:wearable:2.0.0-beta1'
+    implementation "com.android.support:support-annotations:28.0.0"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'uk.me.berndporr:iirj:1.1'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.android.support:design:28.0.0'
     implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
 }
