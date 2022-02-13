@@ -7,7 +7,7 @@ android {
     buildToolsVersion '28.0.2'
 
     defaultConfig {
-        applicationId "com.fruitbasket.audioplatform"
+        applicationId "com.app.gestureReconization"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 22
